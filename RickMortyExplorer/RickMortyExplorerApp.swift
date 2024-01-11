@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import Theming
 
 @main
 struct RickMortyExplorerApp: App {
+    init() {
+        AppTheme.current.apply()
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CategoryListView(categoryViewModel: CategoryViewModel())
         }
     }
 }
